@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+
+<head>
+	<title>Project Template - Sunmock Yang</title>
+	<link rel="stylesheet" type="text/css" href="theme.css">
+</head>
+
+<body>
+
+	<canvas id="canvas" class="project_presentation">
+	</canvas>
+
+
+	<div class="description">
+		Click these to do things:
+		<a onclick="alert('I did something')">Do something</a>
+		<a onclick="document.getElementById('project_presentation').innerHTML = ('I did something else');">Do something else</a>
+		<br/>
+		<br/>
+		Here is a description of my project.
+	</div>
+
+	<div class="project_name">Project Template</div>
+	<a class="credit" href="http://sunmock.com">Sunmock Yang, Jul. 2014</a>
+	
+	<script type="text/javascript">
+		var g = {
+			canvas: null,
+			context: null
+		}
+
+		var app;
+
+		function main() {
+			var canvas = g.canvas = document.getElementById('canvas');
+			var context = g.context = canvas.getContext("2d");
+
+			canvas.width = canvas.height = 400;
+
+			app = new ParticleLights(canvas);
+		}
+
+		window.onload = main;
+		window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+	</script>
+
+	<script type="text/javascript" src="js/ParticleLights.js"></script>
+	<script type="text/javascript" src="js/PLParticle.js"></script>
+	<script type="text/javascript" src="js/lib/Math.js"></script>
+	<script type="text/javascript" src="js/lib/LibraryMouse.min.js"></script>
+
+</body>
+
+</html>

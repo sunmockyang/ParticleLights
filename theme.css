@@ -1,0 +1,40 @@
+body{
+	background-color: #333;
+	font-family: Arial;
+	font-size: 12px;
+	text-decoration: none;
+	color: #FFF;
+}
+
+a{
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+}
+a:hover{
+	color:#9DD;
+}
+
+.project_presentation{
+	z-index: 1;
+	margin-top:10px;
+	margin: 0 auto;
+	border: solid gray 2px;
+	display: block;
+}
+
+.credit{
+	right: 10px;
+	position: fixed;
+	bottom: 10px;
+}
+
+.project_name{
+	left: 10px;
+	position: fixed;
+	bottom: 10px;
+}
+
+.description{
+	text-align: center;
+}
