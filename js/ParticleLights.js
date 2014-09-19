@@ -8,11 +8,13 @@ var ParticleLights = (function(){
 	
 	ParticleLights = function(canvasElement){
 		canvas = canvasElement;
+		canvas.width = canvas.height = 800;
+
 		ctx = canvas.getContext("2d");
 
 		this.particles = [];
 
-		for (var i = 0; i < 1; i++) {
+		for (var i = 0; i < 1000; i++) {
 			this.particles.push(new PLParticle(ctx, canvas.width/2, canvas.height/2));
 		};
 
@@ -26,7 +28,7 @@ var ParticleLights = (function(){
 	};
 	
 	ParticleLights.prototype.draw = function(){
-		ctx.fillStyle = "rgba(0,0,0, 1)";
+		ctx.fillStyle = "rgba(0,0,0,1)";
 		ctx.fillRect(0,0,canvas.width, canvas.height);
 
 		for (var i = 0; i < this.particles.length; i++) {
